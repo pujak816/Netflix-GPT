@@ -1,6 +1,6 @@
 # Netflix GPT
 
-- Create Vite App
+- npm create vite@latest
 - Configured TailwindCSS
 
 # Features
