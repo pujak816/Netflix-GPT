@@ -1,18 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { onAuthStateChanged } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { addUser, removeUser } from "../utils/userSlice";
 
 const Header = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const user = useSelector((store) => store.user);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const { uid, email, displayName, photoURL } = user;
+        dispatch(
+          addUser({
+            uid: uid,
+            email: email,
+            displayName: displayName,
+            photoURL: photoURL,
+          })
+        );
+        navigate("/browse");
+      } else {
+        dispatch(removeUser());
+        navigate("/");
+      }
+    });
+  }, []);
 
   const handleLoginChange = () => {
     signOut(auth)
       .then(() => {
         // Sign-out successful.
-        navigate("/");
       })
       .catch((error) => {
         navigate("/error");
@@ -27,9 +51,12 @@ const Header = () => {
         className="w-40"
       />
       <div className="text-white flex gap-6 font-semibold my-5">
-        <button className="bg-transparent border border-white px-5 py-1 rounded-md ">
-          🌐 English
-        </button>
+        {!user && (
+          <button className="bg-transparent border border-white px-5 py-1 rounded-md ">
+            🌐 English
+          </button>
+        )}
+
         {user && (
           <>
             <img

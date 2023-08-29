@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { checkValidData } from "../utils/validate";
 import {
   createUserWithEmailAndPassword,
@@ -7,8 +7,6 @@ import {
 } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
-import Header from "../components/Header";
 import { addUser } from "../utils/userSlice";
 
 const Login = () => {
@@ -16,7 +14,6 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState(null);
 
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const email = useRef(null);
   const password = useRef(null);
@@ -60,12 +57,10 @@ const Login = () => {
                 })
               );
               // Profile updated!
-              navigate("/browse");
             })
             .catch((error) => {
               setErrorMessage(error.message);
             });
-          // console.log(user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -82,8 +77,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          // console.log(user);
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -94,14 +87,14 @@ const Login = () => {
   };
 
   return (
-    <>
-      <Header />
-      <div className="absolute">
+    <div className="bg-black/40 h-screen ">
+      {/* <Header /> */}
+      {/* <div className="absolute">
         <img
           src="https://assets.nflxext.com/ffe/siteui/vlv3/00103100-5b45-4d4f-af32-342649f1bda5/64774cd8-5c3a-4823-a0bb-1610d6971bd4/IN-en-20230821-popsignuptwoweeks-perspective_alpha_website_large.jpg"
           alt="background"
         />
-      </div>
+      </div> */}
       <form
         onSubmit={(e) => e.preventDefault()}
         className="absolute p-16 bg-black/80 w-1/3 my-24 mx-auto left-0 right-0 text-white"
@@ -148,7 +141,7 @@ const Login = () => {
           </span>
         </p>
       </form>
-    </>
+    </div>
   );
 };
 
