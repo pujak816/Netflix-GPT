@@ -27,6 +27,7 @@
   - fetch Data for Movie Data and Tailer Data
   - Build Redux Store
   - update store with movie Data
+- Build Secondary Container
 
 # Features
 
