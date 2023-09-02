@@ -28,6 +28,9 @@
   - Build Redux Store
   - update store with movie Data
 - Build Secondary Container
+  - TMDB Image CDN Url
+  - Build Movie List
+  - custom hooks for movie list
 
 # Features
 
