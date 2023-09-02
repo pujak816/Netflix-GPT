@@ -17,6 +17,16 @@
 - Update profile
 - BugFix: Sign up user displayName and profile pricture update
 - BugFix: if the user is not logged in Redirect /browse to login Page and vice-cerca
+- Unsubscribe to the onAuthStateChanged callback
+- Add hardcoded values to the constants file
+- Browse Page: using TMDB to fetch movies data
+  - Register TMDB API & get access token
+  - get Data deom TMDB now playing movie list API
+- Build Main Container
+  - custom Hooks
+  - fetch Data for Movie Data and Tailer Data
+  - Build Redux Store
+  - update store with movie Data
 
 # Features
 
