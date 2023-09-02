@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
+import { LOGO } from "../utils/constants";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ const Header = () => {
   const user = useSelector((store) => store.user);
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         const { uid, email, displayName, photoURL } = user;
         dispatch(
@@ -31,6 +32,9 @@ const Header = () => {
         navigate("/");
       }
     });
+
+    // Unsubscribe when component unmounts
+    return () => unsubscribe();
   }, []);
 
   const handleLoginChange = () => {
@@ -45,11 +49,7 @@ const Header = () => {
 
   return (
     <header className="absolute z-10 px-32 py-2 bg-gradient-to-b from-black flex w-full justify-between">
-      <img
-        src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
-        alt="logo"
-        className="w-40"
-      />
+      <img src={LOGO} alt="logo" className="w-40" />
       <div className="text-white flex gap-6 font-semibold my-5">
         {!user && (
           <button className="bg-transparent border border-white px-5 py-1 rounded-md ">
@@ -62,7 +62,7 @@ const Header = () => {
             <img
               src={user?.photoURL}
               alt="img"
-              className="bg-orange-500 rounded-full w-8 "
+              className="bg-orange-500  w-8 "
             />
             <button
               onClick={handleLoginChange}

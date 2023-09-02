@@ -1,11 +1,14 @@
 import React from "react";
+import useMovies from "../hooks/useMovies";
+import MainContainer from "../components/MainContainer";
+import SecondaryContainer from "../components/SecondaryContainer";
 
 const Browse = () => {
+  useMovies();
   return (
     <>
-      <div className="">
-        <section className="pt-20 p-10 font-bold text-2xl">Browse</section>
-      </div>
+      <MainContainer />
+      <SecondaryContainer />
     </>
   );
 };

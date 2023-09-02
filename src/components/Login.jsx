@@ -8,6 +8,7 @@ import {
 import { useDispatch } from "react-redux";
 import { auth } from "../utils/firebase";
 import { addUser } from "../utils/userSlice";
+import { USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -43,8 +44,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL:
-              "https://lh3.googleusercontent.com/a/AAcHTtdK3o-bpOVUTFmnjZLLlAYERo6Y41eN28aBJ2AMYXrTOxzY=s324-c-no",
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -88,13 +88,6 @@ const Login = () => {
 
   return (
     <div className="bg-black/40 h-screen ">
-      {/* <Header /> */}
-      {/* <div className="absolute">
-        <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/00103100-5b45-4d4f-af32-342649f1bda5/64774cd8-5c3a-4823-a0bb-1610d6971bd4/IN-en-20230821-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-          alt="background"
-        />
-      </div> */}
       <form
         onSubmit={(e) => e.preventDefault()}
         className="absolute p-16 bg-black/80 w-1/3 my-24 mx-auto left-0 right-0 text-white"
