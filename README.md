@@ -8,7 +8,7 @@
 - Form Validation
   - use Regex
   - useRef()
-  - Firebase Setup
+  - Firebase Authentication
   - Deploying our app to production
 - Create SignUp User Account
 - Implement Sign In user API
@@ -31,6 +31,11 @@
   - TMDB Image CDN Url
   - Build Movie List
   - custom hooks for movie list
+- GPT Search Feature
+  - Built GPT custom hook
+  - Toggle GPT component from header
+  - GPT search Bar
+    - (FEATURE) Multi-language Feature
 
 # Features
 
