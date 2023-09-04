@@ -25,3 +25,5 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "spanish", name: "Spanish" },
   { identifier: "japanese", name: "Japanese" },
 ];
+
+export const OPENAI_KEY = "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";

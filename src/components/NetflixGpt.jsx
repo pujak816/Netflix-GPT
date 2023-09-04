@@ -6,7 +6,7 @@ import { BG_URL } from "../utils/constants";
 const NetflixGpt = () => {
   return (
     <>
-      <div className="absolute">
+      <div className="fixed">
         <img src={BG_URL} alt="img" />
       </div>
       <section className="bg-black/80 absolute w-full aspect-video pt-[10%]  ">
