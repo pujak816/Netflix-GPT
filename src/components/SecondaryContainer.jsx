@@ -7,9 +7,14 @@ const SecondaryContainer = () => {
   return (
     <>
       <section className="secondaryContainer  bg-black">
-        <div className="-mt-48 relative z-20 pl-12">
+        <div className="-mt-28 relative  pl-12">
+          <MovieList
+            title={"Top Rated Movies"}
+            movies={movies.topRatedMovies}
+          />
           <MovieList title={"Now Playing"} movies={movies.nowPlayingMovies} />
           <MovieList title={"Popular Movies"} movies={movies.popularMovies} />
+          <MovieList title={"Upcoming Movies"} movies={movies.upcomingMovies} />
         </div>
       </section>
     </>

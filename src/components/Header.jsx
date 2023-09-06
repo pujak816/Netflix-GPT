@@ -83,17 +83,11 @@ const Header = () => {
 
         {user && (
           <>
-            <img
-              src={user?.photoURL}
-              alt="img"
-              className="bg-orange-500  w-8 "
-            />
-
             <button
               className="px-4 py-1 bg-white/40  rounded-lg"
               onClick={handleGptSearchClick}
             >
-              {showGptSearch ? "Home" : "GPT Search"}
+              {showGptSearch ? "Home" : "SearchGPT"}
             </button>
             <button
               onClick={handleLoginChange}
@@ -101,6 +95,11 @@ const Header = () => {
             >
               Sign Out
             </button>
+            <img
+              src={user?.photoURL}
+              alt="img"
+              className="bg-orange-500  w-8 "
+            />
           </>
         )}
       </div>
