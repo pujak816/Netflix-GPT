@@ -27,6 +27,7 @@
   - fetch Data for Movie Data and Tailer Data
   - Build Redux Store
   - update store with movie Data
+  - Embedded the Youtube video and make it autoplay and mute
 - Build Secondary Container
   - TMDB Image CDN Url
   - Build Movie List
@@ -36,6 +37,11 @@
   - Toggle GPT component from header
   - GPT search Bar
     - (FEATURE) Multi-language Feature
+  - fetched GPTMovieSuggestion by using openAi
+    - Reused MovieList component to build Movie Suggsetion
+  - Memoization
+  - Added .env file
+  - Responsive UI
 
 # Features
 

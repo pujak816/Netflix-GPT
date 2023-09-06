@@ -6,8 +6,8 @@ const SecondaryContainer = () => {
   const movies = useSelector((store) => store.movies);
   return (
     <>
-      <section className="secondaryContainer  bg-black">
-        <div className="-mt-28 relative  pl-12">
+      <section className="secondaryContainer bg-black h-screen sm:h-auto">
+        <div className="-mt-6 sm:-mt-28 lg:-mt-36 relative pl-4 sm:pl-12">
           <MovieList
             title={"Top Rated Movies"}
             movies={movies.topRatedMovies}

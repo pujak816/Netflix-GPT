@@ -11,8 +11,7 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhODVlN2UwOGUyYzVmZGIwYTUzZWYzNWFjN2JiZDdiNiIsInN1YiI6IjY0ZWQ5MzU0YzYxM2NlMDEwYjhlNTMzMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sqKn6UJgG4h7OWRSN4FP2qm9z2OLmtT6IOC1d4rhsNw",
+    Authorization: "Bearer " + import.meta.env.VITE_TMDB_KEY,
   },
 };
 
@@ -26,4 +25,5 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "japanese", name: "Japanese" },
 ];
 
-export const OPENAI_KEY = "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";
+// export const OPENAI_KEY = "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";
+export const OPENAI_KEY = import.meta.env.VITE_OPENAI_KEY;

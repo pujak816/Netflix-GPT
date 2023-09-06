@@ -6,10 +6,10 @@ import { BG_URL } from "../utils/constants";
 const NetflixGpt = () => {
   return (
     <>
-      <div className="fixed">
-        <img src={BG_URL} alt="img" />
+      <div className="hidden lg:block  fixed  ">
+        <img src={BG_URL} alt="img" className="" />
       </div>
-      <section className="bg-black/80 absolute w-full aspect-video pt-[10%]  ">
+      <section className="bg-black lg:bg-black/80 h-screen  absolute w-full aspect-video pt-[10%]  ">
         <GptSearchBar />
         <GptMovieSuggestion />
       </section>

@@ -61,48 +61,46 @@ const Header = () => {
   };
 
   return (
-    <header className="absolute z-10 px-32 py-2 bg-gradient-to-b from-black flex w-full justify-between">
-      <img src={LOGO} alt="logo" className="w-40" />
-      <div className="text-white flex gap-6 font-semibold my-5">
-        {!user && (
-          <button className="bg-transparent border border-white px-5 py-1 rounded-md ">
-            🌐
-            <select onChange={handleLanguageChange} className="bg-transparent">
-              {SUPPORTED_LANGUAGES.map((lang) => (
-                <option
-                  key={lang.identifier}
-                  value={lang.identifier}
-                  className="text-black"
-                >
-                  {lang.name}
-                </option>
-              ))}
-            </select>
-          </button>
-        )}
+    <header className="absolute z-10 sm:px-14 sm:py-2 bg-black md:bg-transparent bg-gradient-to-b from-black flex w-full justify-between">
+      <img src={LOGO} alt="logo" className="w-24 h-10 sm:w-40 sm:h-auto" />
+      {!user && (
+        <button className="bg-transparent border border-white sm:px-5 sm:py-1 rounded-md  text-white gap-6 font-semibold  text-xs my-3 sm:my-6">
+          🌐
+          <select onChange={handleLanguageChange} className="bg-transparent">
+            {SUPPORTED_LANGUAGES.map((lang) => (
+              <option
+                key={lang.identifier}
+                value={lang.identifier}
+                className="text-black"
+              >
+                {lang.name}
+              </option>
+            ))}
+          </select>
+        </button>
+      )}
 
-        {user && (
-          <>
-            <button
-              className="px-4 py-1 bg-white/40  rounded-lg"
-              onClick={handleGptSearchClick}
-            >
-              {showGptSearch ? "Home" : "SearchGPT"}
-            </button>
-            <button
-              onClick={handleLoginChange}
-              className="bg-red-600 px-4 py-1 rounded-md"
-            >
-              Sign Out
-            </button>
-            <img
-              src={user?.photoURL}
-              alt="img"
-              className="bg-orange-500  w-8 "
-            />
-          </>
-        )}
-      </div>
+      {user && (
+        <div className="flex items-center gap-2 sm:gap-6 font-semibold text-[8px] sm:text-base sm:my-5 pr-2">
+          <button
+            className="px-[5px] py-[1px] sm:px-4 sm:py-1 my-2 bg-white rounded-md"
+            onClick={handleGptSearchClick}
+          >
+            {showGptSearch ? "Home" : "SearchGPT"}
+          </button>
+          <button
+            onClick={handleLoginChange}
+            className="bg-red-600 px-[5px] py-[1px] sm:px-4 sm:py-1 my-2 rounded-md"
+          >
+            Sign Out
+          </button>
+          <img
+            src={user?.photoURL}
+            alt="img"
+            className="bg-orange-500 w-5 h-5 sm:w-8 sm:h-auto"
+          />
+        </div>
+      )}
     </header>
   );
 };

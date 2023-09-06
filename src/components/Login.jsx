@@ -90,9 +90,9 @@ const Login = () => {
     <div className="bg-black/40 h-screen ">
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="absolute p-16 bg-black/80 w-1/3 my-24 mx-auto left-0 right-0 text-white"
+        className="absolute p-2 sm:p-16 bg-black/80 w-2/3 lg:w-1/3 my-28 mx-auto left-0 right-0 text-white"
       >
-        <h1 className=" text-3xl font-bold mb-5 ">
+        <h1 className="text-lg sm:text-3xl font-bold mb-1 sm:mb-5 ">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h1>
 
@@ -100,36 +100,39 @@ const Login = () => {
           ref={email}
           type="text"
           placeholder="Email Address"
-          className="my-2 py-1 px-2 w-full rounded-md bg-gray-700"
+          className="text-xs sm:text-base sm:my-2 py-1 px-3 my-1 w-full rounded-md bg-gray-700"
         />
         {!isSignInForm && (
           <input
             ref={name}
             type="text"
             placeholder="Full Name"
-            className="my-2 py-1 px-2 w-full rounded-md bg-gray-700"
+            className="text-xs sm:text-base sm:my-2 py-1 px-3 my-1  w-full rounded-md bg-gray-700"
           />
         )}
         <input
           ref={password}
           type="password"
           placeholder="password"
-          className="w-full  my-2 py-1 px-2 rounded-md bg-gray-700"
+          className="text-xs sm:text-base sm:my-2 py-1 px-3 my-1  w-full rounded-md bg-gray-700"
         />
-        <p className="text-red-500">{errorMessage}</p>
+        <p className="text-red-500 ">{errorMessage}</p>
 
         {/* submit button */}
         <button
-          className="bg-red-600 w-full  my-6 py-1 rounded-md"
+          className="bg-red-600 w-full text-xs sm:text-base my-3 sm:my-6 py-1 rounded-md"
           onClick={handleButtonClick}
         >
           {isSignInForm ? "Sign In" : "Sign Up"}
         </button>
         <p className="flex gap-1">
-          <span className="text-gray-400">
+          <span className="text-gray-400 text-xs sm:text-base">
             {isSignInForm ? "New to Netflix?" : "Already a user?"}
           </span>
-          <span onClick={toggleSignInForm} className="cursor-pointer ">
+          <span
+            onClick={toggleSignInForm}
+            className="cursor-pointer text-xs sm:text-base"
+          >
             {isSignInForm ? "Sign up now." : "Sign In"}
           </span>
         </p>
