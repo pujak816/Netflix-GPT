@@ -64,14 +64,14 @@ const GptSearchBar = () => {
 
   return (
     <form
-      className="gpt_search flex gap-1 sm:gap-5 p-6 m-6 justify-center text-white text-[8px] sm:text-base"
+      className="gpt_search flex gap-1 sm:gap-5 pt-4 sm:p-6 m-6 justify-center text-white text-[8px] sm:text-base"
       onSubmit={(e) => e.preventDefault()}
     >
       <input
         ref={searchText}
         type="text"
         placeholder={lang[langKey].gptSearchPlaceholder}
-        className="rounded-lg px-4 sm:px-10 py-[2px] sm:py-2 w-[70%] sm:w-[55%] bg-white/20"
+        className="rounded-lg px-4 sm:px-10 py-[2px] sm:py-2 w-[70%] sm:w-[55%] bg-white/20 "
       />
       <button
         className="bg-red-700 rounded-lg px-1 sm:px-6 text-[6px] sm:text-base text-white"

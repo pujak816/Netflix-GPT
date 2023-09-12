@@ -8,7 +8,7 @@ const MovieCard = ({ posterPath }) => {
     <img
       src={IMG_CDN_URL + posterPath}
       alt="movie_img"
-      className="w-10 sm:w-24 lg:w-40 pr-[2px] sm:pr-2"
+      className="w-24 sm:w-40 pr-[2px] sm:pr-2"
     />
   );
 };

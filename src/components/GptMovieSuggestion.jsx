@@ -11,7 +11,7 @@ const GptMovieSuggestion = () => {
   return movieNames.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="bg-black lg:bg-black/90  p-10 text-white font-bold text-xl ">
+    <div className="bg-black lg:bg-black/90 p-2 sm:p-10 text-white font-bold text-xl ">
       <div>
         {movieNames.map((movieName, index) => (
           <MovieList
