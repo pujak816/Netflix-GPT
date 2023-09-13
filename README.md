@@ -1,5 +1,27 @@
 # Netflix GPT
 
+- Netflix Clone built using Vite, ReactJs, Redux Toolkit, Tailwind CSS, Material UI Icon, TMDB API and Open AI GPT.
+- This project aims to replicate the core functionality of a movie straming app, allowing users to search for movies genres using open AI GPT
+- check out the app <a href='https://movieapp-clone.vercel.app/'>here</a>
+
+# Features
+
+- Login/Sign Up
+  - Sing In/ Sing Up Form
+  - Redirect to Browse Page
+- Browse (after authentication)
+  - Header
+  - Main Movie
+    - Trailer in Backgrpund
+    - Title & Description
+    - Movie Suggestion
+      - MovieLists \* N
+- NetflixGPT
+  - Search Bar
+  - Movie Suggestions
+
+# Creation
+
 - npm create vite@latest
 - Configured TailwindCSS
 - Header
@@ -22,13 +44,13 @@
 - Browse Page: using TMDB to fetch movies data
   - Register TMDB API & get access token
   - get Data deom TMDB now playing movie list API
-- Build Main Container
+- Main Container
   - custom Hooks
   - fetch Data for Movie Data and Tailer Data
   - Build Redux Store
   - update store with movie Data
   - Embedded the Youtube video and make it autoplay and mute
-- Build Secondary Container
+- Secondary Container
   - TMDB Image CDN Url
   - Build Movie List
   - custom hooks for movie list
@@ -39,22 +61,6 @@
     - (FEATURE) Multi-language Feature
   - fetched GPTMovieSuggestion by using openAi
     - Reused MovieList component to build Movie Suggsetion
-  - Memoization
-  - Added .env file
-  - Responsive UI
-
-# Features
-
-- Login/Sign Up
-  - Sing In/ Sing Up Form
-  - Redirect to Browse Page
-- Browse (after authentication)
-  - Header
-  - Main Movie
-    - Trailer in Backgrpund
-    - Title & Description
-    - Movie Suggestion
-      - MovieLists \* N
-- NetflixGPT
-  - Search Bar
-  - Movie Suggestions
+- Memoization
+- Added .env file
+- Responsive UI
