@@ -1,6 +1,8 @@
 # Netflix GPT
 
-- Netflix Clone built using Vite, ReactJs, Redux Toolkit, Tailwind CSS, Material UI Icon, TMDB API and Open AI GPT.
+Like Netflix but with GPT superpowers..
+
+- built using Vite, ReactJs, Redux Toolkit, Tailwind CSS, Material UI Icon, TMDB API and Open AI GPT.
 - This project aims to replicate the core functionality of a movie straming app, allowing users to search for movies genres using open AI GPT
 - check out the app <a href='https://movieapp-clone.vercel.app/'>here</a>
 
