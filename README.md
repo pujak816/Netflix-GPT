@@ -14,7 +14,7 @@ To create a test user for our application, follow these steps:
 2. Fill out the registration form with the following details:
    - **Email**: netflix@gmail.com
    - **Password**: Netflix@123
-3. Click the "Register" button to create the test user account.
+3. Click the "Sign up now" button to create the test user account.
 4. You can now use the provided credentials to log in and test the application.
 
 # Features
