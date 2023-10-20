@@ -12,7 +12,6 @@ To create a test user for our application, follow these steps:
 
 1. Visit the registration page at [https://movieapp-clone.vercel.app/](https://movieapp-clone.vercel.app/).
 2. Fill out the registration form with the following details:
-   - **Username**: Netflix
    - **Email**: netflix@gmail.com
    - **Password**: Netflix@123
 3. Click the "Register" button to create the test user account.
