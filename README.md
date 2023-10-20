@@ -6,6 +6,18 @@ Like Netflix but with GPT superpowers..
 - This project aims to replicate the core functionality of a movie straming app, allowing users to search for movies genres using open AI GPT
 - check out the app <a href='https://movieapp-clone.vercel.app/'>here</a>
 
+## Creating a Test User
+
+To create a test user for our application, follow these steps:
+
+1. Visit the registration page at [https://movieapp-clone.vercel.app/](https://movieapp-clone.vercel.app/).
+2. Fill out the registration form with the following details:
+   - **Username**: Netflix
+   - **Email**: netflix@gmail.com
+   - **Password**: Netflix@123
+3. Click the "Register" button to create the test user account.
+4. You can now use the provided credentials to log in and test the application.
+
 # Features
 
 - Login/Sign Up
